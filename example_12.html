@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Failure</title>
+</head>
+
+<body>
+    <label for="value1">Value1</label>
+    <input type="number" id="value1" />
+    <label for="value2">Value2</label>
+    <input type="number" id="value2" />
+    <button id="btn">Submit</button>
+    <hr>
+    <h2>Result</h2>
+    <p id="result"></p>
+    <p id="result_1"></p>
+
+    <script>
+        let result = document.getElementById("result");
+        let button = document.getElementById("btn");
+        function summing() {
+            let a = parseInt(document.getElementById("value1").value);
+            let b = parseInt(document.getElementById("value2").value);
+            let sum = a + b;
+            let sub=a-b;
+           /// console.log(sum);
+            document.getElementById("result").textContent = sum;
+            document.getElementById("result_1").textContent = sub;
+        }
+        button.addEventListener("click", summing);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function validateForm() {
+  let x = document.forms["tuktuki"]["fname"].value;
+  let y=document.forms["tuktuki"]["age"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+ if (y == "") {
+    alert("age must be filled out");
+    return false;
+  }
+}
+</script>
+</head>
+<body>
+
+<h2>JavaScript Validation</h2>
+
+<form name="tuktuki" onsubmit="return validateForm()" method="post">
+  Name: <input type="text" name="fname"><br> <br>
+  Age:<input type="text" name="age"> <br> <br>
+  
+  <input type="submit" value="submit">
+</form>
+
+</body>
